@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+      - name: Install ttfautohint
+        run: sudo apt-get install -y ttfautohint
       - name: Install dependencies
         run: npm install
       - name: Build
