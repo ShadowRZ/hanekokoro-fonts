@@ -9,7 +9,7 @@ jobs:
   build:
     strategy:
       matrix:
-        fonts: ['iosevka-minoko', 'iosekva-minoko-e', 'iosevka-aile-minoko']
+        fonts: ['iosevka-minoko', 'iosevka-minoko-e', 'iosevka-aile-minoko']
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Iosevka
@@ -42,6 +42,7 @@ jobs:
           path: ttf-${{ matrix.fonts }}.zip
   upload:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v3
