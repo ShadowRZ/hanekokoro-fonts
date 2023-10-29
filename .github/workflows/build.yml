@@ -41,11 +41,13 @@ jobs:
           name: ttf-${{ matrix.fonts }}.zip
           path: ttf-${{ matrix.fonts }}.zip
   upload:
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v3
-    - name: Upload
-      uses: ncipollo/release-action@v1.6.1
-      with:
-        allowUpdates: true
-        artifacts: "ttf-*.zip"
-        token: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3
+      - name: Upload
+        uses: ncipollo/release-action@v1.6.1
+        with:
+          allowUpdates: true
+          artifacts: "ttf-*.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
