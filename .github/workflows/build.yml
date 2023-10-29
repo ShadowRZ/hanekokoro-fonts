@@ -1,0 +1,51 @@
+name: Build Fonts
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        fonts: ['iosevka-minoko', 'iosekva-minoko-e', 'iosevka-aile-minoko']
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Iosevka
+        uses: actions/checkout@v4
+        with:
+          ref: v27.3.2
+          repository: be5invis/Iosevka
+      - name: Checkout Build Plans
+        uses: actions/checkout@v4
+        with:
+          path: _build_plans
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: |
+          cp _build_plans/${{ matrix.fonts }}.toml private-build-plans.toml
+          npm run build -- ttf::${{ matrix.fonts }}
+      - name: Build ZIP Packages
+        run: |
+          zip -j ttf-${{ matrix.fonts }}.zip dist/${{ matrix.fonts }}/ttf/*.ttf
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ttf-${{ matrix.fonts }}.zip
+          path: ttf-${{ matrix.fonts }}.zip
+  upload:
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v3
+    - name: Upload
+      uses: ncipollo/release-action@v1.6.1
+      with:
+        allowUpdates: true
+        artifacts: "ttf-*.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
