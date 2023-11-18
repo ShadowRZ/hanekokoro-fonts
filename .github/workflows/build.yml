@@ -43,7 +43,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ttf-${{ matrix.fonts }}.zip
+          name: ttf-${{ matrix.fonts }}
           path: ttf-${{ matrix.fonts }}.zip
   upload:
     runs-on: ubuntu-latest
@@ -54,4 +54,4 @@ jobs:
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
-          files: "ttf-*.zip"
+          files: "ttf-*/ttf-*.zip"
