@@ -12,7 +12,7 @@ jobs:
   build:
     strategy:
       matrix:
-        fonts: ['iosevka-minoko', 'iosevka-minoko-e', 'iosevka-aile-minoko']
+        fonts: ['iosevka-minoko', 'iosevka-minoko-e', 'iosevka-aile-minoko', 'iosevka-minoko-term']
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Iosevka
