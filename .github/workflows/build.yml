@@ -18,7 +18,7 @@ jobs:
       - name: Checkout Iosevka
         uses: actions/checkout@v4
         with:
-          ref: v27.3.2
+          ref: v29.1.0
           repository: be5invis/Iosevka
       - name: Checkout Build Plans
         uses: actions/checkout@v4
