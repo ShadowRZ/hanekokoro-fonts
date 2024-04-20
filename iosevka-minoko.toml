@@ -2,8 +2,8 @@
 family = "Iosevka Minoko"
 spacing = "normal"
 serifs = "sans"
-no-cv-ss = true
-export-glyph-names = true
+noCvSs = true
+exportGlyphNames = false
 
   [buildPlans.iosevka-minoko.variants]
   inherits = "ss10"

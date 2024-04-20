@@ -2,8 +2,8 @@
 family = "Iosevka Aile Minoko"
 spacing = "quasi-proportional"
 serifs = "sans"
-no-cv-ss = true
-export-glyph-names = false
+noCvSs = true
+exportGlyphNames = false
 
   [buildPlans.iosevka-aile-minoko.variants]
   inherits = "ss10"
