@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 name: Build Fonts
 
 on:
@@ -12,7 +13,7 @@ jobs:
   build:
     strategy:
       matrix:
-        fonts: ['iosevka-minoko', 'iosevka-minoko-e', 'iosevka-aile-minoko', 'iosevka-minoko-term']
+        fonts: ['IosevkaMinoko', 'IosevkaMinokoE', 'IosevkaAileMinoko', 'IosevkaMinokoTerm']
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Iosevka
@@ -33,6 +34,8 @@ jobs:
         run: sudo apt-get install -y ttfautohint
       - name: Install dependencies
         run: npm install
+      - name: Copy build plans
+        run: cp _build_plans/private-build-plans.toml private-build-plans.toml
       - name: Build
         run: |
           cp _build_plans/${{ matrix.fonts }}.toml private-build-plans.toml
