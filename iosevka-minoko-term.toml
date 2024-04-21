@@ -1,14 +1,14 @@
-[buildPlans.iosevka-minoko-term]
+[buildPlans.IosevkaMinokoTerm]
 family = "Iosevka Minoko Term"
 spacing = "term"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-  [buildPlans.iosevka-minoko-term.variants]
+  [buildPlans.IosevkaMinokoTerm.variants]
   inherits = "ss10"
 
-    [buildPlans.iosevka-minoko-term.variants.design]
+    [buildPlans.IosevkaMinokoTerm.variants.design]
     capital-c = "unilateral-inward-serifed"
     capital-g = "toothless-corner-serifless-hooked"
     capital-j = "flat-hook-serifed-both-sides"
@@ -58,5 +58,5 @@ exportGlyphNames = false
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
 
-  [buildPlans.iosevka-minoko-term.ligations]
+  [buildPlans.IosevkaMinokoTerm.ligations]
   inherits = "dlig"

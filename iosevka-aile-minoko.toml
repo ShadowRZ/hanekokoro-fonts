@@ -1,14 +1,14 @@
-[buildPlans.iosevka-aile-minoko]
+[buildPlans.IosevkaAileMinoko]
 family = "Iosevka Aile Minoko"
 spacing = "quasi-proportional"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-  [buildPlans.iosevka-aile-minoko.variants]
+  [buildPlans.IosevkaAileMinoko.variants]
   inherits = "ss10"
 
-    [buildPlans.iosevka-aile-minoko.variants.design]
+    [buildPlans.IosevkaAileMinoko.variants.design]
     capital-c = "unilateral-inward-serifed"
     capital-g = "toothless-corner-serifless-hooked"
     capital-j = "flat-hook-serifed-both-sides"
@@ -58,10 +58,10 @@ exportGlyphNames = false
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
 
-  [buildPlans.iosevka-aile-minoko.ligations]
+  [buildPlans.IosevkaAileMinoko.ligations]
   inherits = "dlig"
 
-[buildPlans.iosevka-aile-minoko.widths.normal]
+[buildPlans.IosevkaAileMinoko.widths.Normal]
 shape = 600
 menu = 5
 css = "normal"
