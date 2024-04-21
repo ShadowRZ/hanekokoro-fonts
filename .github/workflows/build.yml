@@ -38,16 +38,15 @@ jobs:
         run: cp _build_plans/private-build-plans.toml private-build-plans.toml
       - name: Build
         run: |
-          cp _build_plans/${{ matrix.fonts }}.toml private-build-plans.toml
           npm run build -- ttf::${{ matrix.fonts }}
       - name: Build ZIP Packages
         run: |
-          zip -j ttf-${{ matrix.fonts }}.zip dist/${{ matrix.fonts }}/ttf/*.ttf
+          zip -j PkgTTF-${{ matrix.fonts }}.zip dist/${{ matrix.fonts }}/TTF/*.ttf
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ttf-${{ matrix.fonts }}
-          path: ttf-${{ matrix.fonts }}.zip
+          name: PkgTTF-${{ matrix.fonts }}
+          path: PkgTTF-${{ matrix.fonts }}.zip
   upload:
     runs-on: ubuntu-latest
     needs: build
@@ -57,4 +56,4 @@ jobs:
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
-          files: "ttf-*/ttf-*.zip"
+          files: "PkgTTF-*/PkgTTF-*.zip"
