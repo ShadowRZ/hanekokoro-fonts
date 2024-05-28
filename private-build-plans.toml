@@ -265,3 +265,8 @@ exportGlyphNames = false
 shape = 600
 menu = 5
 css = "normal"
+
+[buildPlans.IosevkaAileMinoko.widths.Extended]
+shape = 720
+menu = 7
+css = "expanded"
