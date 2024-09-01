@@ -204,52 +204,32 @@ spacing = "quasi-proportional"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
+noLigation = true
 
   [buildPlans.IosevkaAileMinoko.variants]
-  inherits = "ss10"
+  inherits = "ss11"
 
     [buildPlans.IosevkaAileMinoko.variants.design]
-    capital-c = "unilateral-inward-serifed"
-    capital-g = "toothless-corner-serifless-hooked"
-    capital-j = "flat-hook-serifed-both-sides"
-    capital-k = "curly-serifless"
-    capital-l = "serifless"
-    capital-p = "open-serifless"
+    zero = "slashed"
+    capital-m = "flat-bottom-serifless"
     capital-q = "crossing-baseline"
-    capital-r = "curly-open-serifless"
-    capital-s = "unilateral-inward-serifed"
-    capital-x = "curly-serifless"
-    capital-y = "curly-serifless"
-    a = "single-storey-earless-rounded-tailed"
-    b = "toothless-corner-serifless"
-    c = "unilateral-inward-serifed"
+    a = "single-storey-serifless"
     d = "toothless-corner-serifless"
     e = "rounded"
-    f = "serifless"
-    g = "single-storey-flat-hook-earless-rounded"
-    i = "serifed-diagonal-tailed"
-    j = "diagonal-tailed-serifed"
-    k = "curly-top-left-serifed"
-    l = "serifed-diagonal-tailed"
-    m = "earless-rounded-double-arch-tailed-serifless"
-    n = "earless-corner-tailed-serifless"
-    p = "earless-corner-serifless"
-    q = "earless-corner-diagonal-tailed-serifless"
+    g = "single-storey-earless-corner"
+    i = "serifless"
+    j = "diagonal-tailed-serifless"
+    l = "diagonal-tailed"
+    q = "diagonal-tailed-serifless"
     r = "serifless"
-    s = "unilateral-inward-serifed"
     t = "diagonal-tailed"
     u = "toothless-rounded-serifless"
-    x = "curly-serifless"
-    y = "cursive-serifless"
-    eszet = "sulzbacher-bottom-serifed"
-    lower-lambda = "curly-turn"
-    lower-mu = "toothless-rounded-motion-serifed"
-    zero = "tall-slashed"
+    y = "cursive-flat-hook-serifless"
     paren = "flat-arc"
     brace = "curly-flat-boundary"
     at = "fourfold-tall"
     dollar = "through-cap"
-    percent = "rings-segmented-slash"
+    percent = "rings-continuous-slash-also-connected"
     question = "corner"
     pilcrow = "high"
     lig-neq = "vertical"
@@ -258,15 +238,7 @@ exportGlyphNames = false
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
 
-  [buildPlans.IosevkaAileMinoko.ligations]
-  inherits = "dlig"
-
 [buildPlans.IosevkaAileMinoko.widths.Normal]
 shape = 600
 menu = 5
 css = "normal"
-
-[buildPlans.IosevkaAileMinoko.widths.Extended]
-shape = 658
-menu = 6
-css = "expanded"
