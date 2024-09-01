@@ -43,7 +43,7 @@ jobs:
         run: |
           zip -j PkgTTF-${{ matrix.fonts }}.zip dist/${{ matrix.fonts }}/TTF/*.ttf
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: PkgTTF-${{ matrix.fonts }}
           path: PkgTTF-${{ matrix.fonts }}.zip
