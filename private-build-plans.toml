@@ -1,22 +1,24 @@
 # SPDX-License-Identifier: MIT
 
-### Iosevka Minoko
-[buildPlans.IosevkaMinoko]
-family = "Iosevka Minoko"
-spacing = "normal"
+### Hanekokoro Mono
+[buildPlans.HanekokoroMono]
+family = "Hanekokoro Mono"
+spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-  [buildPlans.IosevkaMinoko.variants]
+  [buildPlans.HanekokoroMono.variants]
   inherits = "ss10"
 
-    [buildPlans.IosevkaMinoko.variants.design]
+    [buildPlans.HanekokoroMono.variants.design]
     one = "no-base-long-top-serif"
     three = "flat-top-serifless"
+    six = "closed-contour"
     eight = "crossing"
     nine = "closed-contour"
     zero = "tall-slashed"
+    capital-b = "standard-interrupted-serifless"
     capital-c = "unilateral-inward-serifed"
     capital-g = "toothless-corner-serifless-hooked"
     capital-j = "flat-hook-serifed"
@@ -29,6 +31,7 @@ exportGlyphNames = false
     capital-w = "rounded-vertical-sides-serifless"
     capital-x = "curly-serifless"
     capital-y = "curly-serifless"
+    capital-z = "curly-serifless"
     a = "single-storey-earless-rounded-tailed"
     b = "toothless-corner-serifless"
     c = "unilateral-inward-serifed"
@@ -51,6 +54,7 @@ exportGlyphNames = false
     x = "curly-serifless"
     y = "cursive-serifless"
     capital-eszet = "corner-serifless"
+    long-s = "flat-hook-diagonal-tailed"
     eszet = "longs-s-lig-serifless"
     lower-lambda = "curly-turn"
     lower-mu = "toothless-rounded-motion-serifed"
@@ -75,57 +79,51 @@ exportGlyphNames = false
     lig-double-arrow-bar = "without-notch"
     lig-single-arrow-bar = "without-notch"
 
-  [buildPlans.IosevkaMinoko.ligations]
+  [buildPlans.HanekokoroMono.ligations]
   inherits = "dlig"
 
-### Iosevka Minoko-E
-[buildPlans.IosevkaMinokoE]
-family = "Iosevka Minoko-E"
-spacing = "normal"
+  [buildPlans.HanekokoroMono.namingOverride]
+  manufacturer = "Yorusaka Miyabi"
+  description = "Yorusaka Miyabi's custom Iosevka build"
+
+### Hanekokoro Mono-E
+[buildPlans.HanekokoroMonoE]
+family = "Hanekokoro Mono-E"
+spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-  [buildPlans.IosevkaMinokoE.variants]
-  inherits = "buildPlans.IosevkaMinoko"
+  [buildPlans.HanekokoroMonoE.variants]
+  inherits = "buildPlans.HanekokoroMono"
 
-  [buildPlans.IosevkaMinokoE.ligations]
+  [buildPlans.HanekokoroMonoE.ligations]
   inherits = "dlig"
 
-[buildPlans.IosevkaMinokoE.widths.Normal]
-shape = 600
-menu = 5
-css = "normal"
+  [buildPlans.HanekokoroMonoE.namingOverride]
+  manufacturer = "Yorusaka Miyabi"
+  description = "Yorusaka Miyabi's custom Iosevka build"
 
-### Iosevka Minoko Term
-[buildPlans.IosevkaMinokoTerm]
-family = "Iosevka Minoko Term"
-spacing = "term"
-serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
+  [buildPlans.HanekokoroMonoE.widths.Normal]
+  shape = 600
+  menu = 5
+  css = "normal"
 
-  [buildPlans.IosevkaMinokoTerm.variants]
-  inherits = "buildPlans.IosevkaMinoko"
-
-  [buildPlans.IosevkaMinokoTerm.ligations]
-  inherits = "dlig"
-
-### Iosevka Aile Minoko
-[buildPlans.IosevkaAileMinoko]
-family = "Iosevka Aile Minoko"
+### Hanekokoro Sans
+[buildPlans.HanekokoroSans]
+family = "Hanekokoro Sans"
 spacing = "quasi-proportional"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
-  [buildPlans.IosevkaAileMinoko.variants]
+  [buildPlans.HanekokoroSans.variants]
   inherits = "ss20"
 
-    [buildPlans.IosevkaAileMinoko.variants.design]
+    [buildPlans.HanekokoroSans.variants.design]
     one = "no-base-long-top-serif"
     three = "flat-top-serifless"
-    four = "open-serifless"
+    four = "open-non-crossing-serifless"
     five = "upright-flat-serifless"
     six = "closed-contour"
     seven = "curly-serifless"
@@ -133,7 +131,9 @@ exportGlyphNames = false
     nine = "closed-contour"
     zero = "reverse-slashed-cutout"
     capital-a = "round-top-serifless"
+    capital-b = "standard-interrupted-serifless"
     capital-g = "toothless-rounded-serifless-hooked"
+    capital-i = "short-serifed"
     capital-j = "descending-serifless"
     capital-l = "serifless"
     capital-p = "open-serifless"
@@ -149,6 +149,8 @@ exportGlyphNames = false
     i = "serifless"
     j = "diagonal-tailed-serifless"
     l = "diagonal-tailed"
+    m = "earless-corner-double-arch-serifless"
+    n = "earless-corner-straight-serifless"
     p = "earless-rounded-serifless"
     q = "earless-corner-diagonal-tailed-serifless"
     r = "compact-serifless"
@@ -171,7 +173,11 @@ exportGlyphNames = false
     lig-equal-chain = "without-notch"
     lig-hyphen-chain = "without-notch"
 
-[buildPlans.IosevkaAileMinoko.widths.Normal]
-shape = 600
-menu = 5
-css = "normal"
+  [buildPlans.HanekokoroSans.namingOverride]
+  manufacturer = "Yorusaka Miyabi"
+  description = "Yorusaka Miyabi's custom Iosevka build"
+
+  [buildPlans.HanekokoroSans.widths.Normal]
+  shape = 548
+  menu = 5
+  css = "normal"
