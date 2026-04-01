@@ -157,6 +157,24 @@ exportGlyphNames = false
   menu = 5
   css = "normal"
 
+### Hanekokoro Mono-K
+[buildPlans.HanekokoroMonoK]
+family = "Hanekokoro Mono-K"
+spacing = "fontconfig-mono"
+serifs = "sans"
+noCvSs = true
+exportGlyphNames = true
+
+  [buildPlans.HanekokoroMonoK.variants]
+  inherits = "buildPlans.HanekokoroMono"
+
+  [buildPlans.HanekokoroMonoK.ligations]
+  inherits = "dlig"
+
+  [buildPlans.HanekokoroMonoK.namingOverride]
+  manufacturer = "Yorusaka Miyabi"
+  description = "Yorusaka Miyabi's custom Iosevka build"
+
 ### Hanekokoro Sans
 [buildPlans.HanekokoroSans]
 family = "Hanekokoro Sans"
